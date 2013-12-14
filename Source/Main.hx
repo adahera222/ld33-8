@@ -61,7 +61,7 @@ class Main extends Sprite {
 		
 	}
 	
-	static function onUpdate()
+	static function onUpdate(event:Event)
 	{
 		// COLLISION DETECTION HERE
 	}
