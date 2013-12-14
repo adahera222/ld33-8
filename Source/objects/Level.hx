@@ -43,9 +43,7 @@ class Level extends Sprite
 	// HANDLERS
 	
 	public function onKeyDown (event:KeyboardEvent)
-	{
-		trace("level::onkeydown");
-		
+	{	
 		if (player == null) return;
 		
 		switch (event.keyCode) 
@@ -70,6 +68,11 @@ class Level extends Sprite
 	{
 		for (enemy in this._enemies) 
 		{
+			if (_player != null && _player.hitTestObject(enemy))
+			{
+				_player.onHit();
+			}
+			
 			enemy.update();
 		}
 		// COLLISION DETECTION HERE

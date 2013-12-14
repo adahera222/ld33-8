@@ -42,6 +42,11 @@ class Player extends Entity
 		this.y += this._step;
 	}
 	
+	public function onHit()
+	{
+		
+	}
+	
 	// PUBLIC METHODS
 	
 	
