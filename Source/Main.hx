@@ -5,7 +5,10 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
+import haxe.ds.StringMap.StringMap;
+import objects.Enemy;
 import objects.Entity;
+import objects.Level;
 import objects.Player;
 
 import motion.easing.Elastic;
@@ -18,52 +21,64 @@ import motion.Actuate;
 
 class Main extends Sprite {
 	
-	static var player:Player;
+	var player:Player;
+	var currentLevel:Level;
+	var levelMap:StringMap<Level>;
 	
 	// CONSTRUCTORS
 	
 	public function new () {
 		
 		super ();
+		levelMap = new StringMap();
 		
 		player = new Player(15);
-		addChild(player);
+		//addChild(player);
+		
+		createLevel("1", 5);
 		
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 		stage.addEventListener(Event.ENTER_FRAME, onUpdate);
 		
-		
 	}
 	
 	// HANDLERS
 	
-	static function onKeyDown (event:KeyboardEvent)
+	function onKeyDown (event:KeyboardEvent)
 	{
-		if (player == null) return;
-		
-		switch (event.keyCode) 
+		if (currentLevel == null) return;
+		currentLevel.onKeyDown(event);
+	}
+	
+	function onKeyUp (event:KeyboardEvent)
+	{
+		if (currentLevel == null) return;
+		currentLevel.onKeyUp(event);
+	}
+	
+	function onUpdate(event:Event)
+	{
+		if (currentLevel == null) return;
+		currentLevel.onUpdate(event);
+	}
+	
+	// PRIVATE METHODS
+	
+	private function createLevel(id, numberOfEnemies)
+	{
+		// create and init new level
+		var level = new Level(id, numberOfEnemies);
+		level.player = this.player;
+		// add level to table
+		levelMap.set(id, level);
+		// set current level if not set
+		if (currentLevel == null) 
 		{
-			case Keyboard.RIGHT:
-				player.GoRight();
-			case Keyboard.LEFT:
-				player.GoLeft();
-			case Keyboard.UP:
-				player.GoUp();
-			case Keyboard.DOWN:
-				player.GoDown();
+			currentLevel = level;
+			addChild(currentLevel);
 		}
-	}
-	
-	static function onKeyUp (event:KeyboardEvent)
-	{
-		
-	}
-	
-	static function onUpdate(event:Event)
-	{
-		// COLLISION DETECTION HERE
 	}
 	
 	
