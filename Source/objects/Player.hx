@@ -22,8 +22,6 @@ class Player extends Entity
 	
 	// HANDLERS
 	
-	// PUBLIC METHODS
-	
 	public function GoLeft()
 	{
 		this.x -= this._step;
@@ -44,8 +42,9 @@ class Player extends Entity
 		this.y += this._step;
 	}
 	
+	// PUBLIC METHODS
+	
+	
 	// PRIVATE METHODS
-	
-	
 	
 }
