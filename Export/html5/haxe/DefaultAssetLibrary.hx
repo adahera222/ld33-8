@@ -36,10 +36,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/gfx/redblock.png", __ASSET__assets_gfx_redblock_png);
+		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
 		
 		#elseif html5
 		
+		path.set ("assets/gfx/redblock.png", "assets/gfx/redblock.png");
+		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
 		
 		#else
@@ -481,9 +485,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if pixi
 #elseif flash
 
+class __ASSET__assets_gfx_redblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 
 
 #elseif html5
+
 
 
 

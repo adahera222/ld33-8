@@ -55,6 +55,13 @@ class ApplicationMain {
 
 		
 		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/redblock.png", loader);
+		total ++;
+		
+		
+		
 		var resourcePrefix = "__ASSET__:bitmap_";
 		for (resourceName in Resource.listNames()) {
 			if (StringTools.startsWith (resourceName, resourcePrefix)) {
