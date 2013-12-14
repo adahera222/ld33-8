@@ -107,6 +107,7 @@ class Level extends Sprite
 		// set and return new player
 		_player = player;
 		addChild(_player);
+		_player.setStartPosition(this._safeZone);
 		return _player; 
 	}
 	

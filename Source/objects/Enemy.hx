@@ -41,9 +41,19 @@ class Enemy extends Entity
 	
 	private function getRandomPoint()
 	{
-		
 		var x = random(640);
 		var y = random(480);
+		switch (this._safeZone) 
+		{
+			case 1:
+				if (x > 589 && y < 51) { x = random(640) - 51; }
+			case 2:
+				if (x < 51 && y > 429) { x = 51 + random(590);  }
+			case 3:
+				if (x > 589 && y > 429) { x = random(640) - 51; }
+			default:
+				if (x < 51 && y < 51) { x = 51 + random(590); }
+		}
 		return new Point(x, y);
 	}
 	

@@ -54,6 +54,21 @@ class Player extends Entity
 	
 	// PUBLIC METHODS
 	
+	public function setStartPosition(safeZone)
+	{
+		switch (safeZone) 
+		{
+			case 1:
+				this.moveTo(615, 25);
+			case 2:
+				this.moveTo(25, 455);
+			case 3:
+				this.moveTo(615, 455);
+			default:
+				this.moveTo(25, 25);
+		}
+	}
+	
 	
 	// PRIVATE METHODS
 	
