@@ -2,6 +2,7 @@ package;
 
 
 import flash.display.Sprite;
+import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
 import objects.Entity;
@@ -19,6 +20,8 @@ class Main extends Sprite {
 	
 	static var player:Player;
 	
+	// CONSTRUCTORS
+	
 	public function new () {
 		
 		super ();
@@ -29,9 +32,12 @@ class Main extends Sprite {
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
+		stage.addEventListener(Event.ENTER_FRAME, onUpdate);
 		
 		
 	}
+	
+	// HANDLERS
 	
 	static function onKeyDown (event:KeyboardEvent)
 	{
@@ -53,6 +59,11 @@ class Main extends Sprite {
 	static function onKeyUp (event:KeyboardEvent)
 	{
 		
+	}
+	
+	static function onUpdate()
+	{
+		// COLLISION DETECTION HERE
 	}
 	
 	
