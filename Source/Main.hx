@@ -35,7 +35,7 @@ class Main extends Sprite {
 		addChild(blok3);
 		addChild(blok4);
 		
-		//Actuate.tween(blok1, 3, { x: 300, y: 300, changeImage: 'prupleblock.png' } ).delay(0.4).ease(Bounce.easeOut);
+		Actuate.tween(blok1, 3, { x: 300, y: 300 } ).delay(0.4).ease(Bounce.easeOut);
 		Actuate.tween(blok2, 3, { x: 400, y: 200 } ).delay(0.4).ease(Elastic.easeIn);
 		Actuate.tween(blok3, 3, { x: 50, y: 3 } ).delay(0.4).ease(Cubic.easeInOut);
 		Actuate.tween(blok4, 3, { x: 100, y: 50 } ).delay(0.4).ease(Quad.easeOut);
