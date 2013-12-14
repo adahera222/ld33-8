@@ -10,7 +10,7 @@ import openfl.Assets;
  */
 class ResourceManager
 {
-	static private var _bitmap_map:StringMap <BitmapData>;
+	static private var _bitmap_map:StringMap <BitmapData> = new StringMap();
 	
 	static public function getBitmap (fname)
 	{
