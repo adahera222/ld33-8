@@ -22,7 +22,6 @@ import motion.Actuate;
 
 class Main extends Sprite {
 
-	public static var Instance:Main;
 	public static var GAME_OVER = "Main.GAME_OVER";
 	
 	var player:Player;
@@ -36,8 +35,7 @@ class Main extends Sprite {
 		super ();
 		levelMap = new StringMap();
 		
-		player = new Player(15);
-		//addChild(player);
+		createPlayer();
 		
 		createGameOverLevel();
 		createLevel("1", 5);
@@ -47,7 +45,7 @@ class Main extends Sprite {
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 		stage.addEventListener(Event.ENTER_FRAME, onUpdate);
 		
-		Instance = this;
+		//Instance = this;
 		
 	}
 	
@@ -87,6 +85,15 @@ class Main extends Sprite {
 	}
 	
 	// PRIVATE METHODS
+	
+	private function createPlayer()
+	{
+		player = new Player(15);
+		player.onHitEnemy = function ()
+		{
+			this.changeLevel(GAME_OVER);
+		}
+	}
 	
 	private function createLevel(id, numberOfEnemies)
 	{

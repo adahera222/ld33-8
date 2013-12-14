@@ -10,6 +10,8 @@ class Player extends Entity
 	
 	private var _step: Int = 5;
 	
+	public var onHitEnemy:Void -> Void;
+	
 	// PROPERTIES
 	
 	// CONSTRUCTORS
@@ -42,9 +44,9 @@ class Player extends Entity
 		this.y += this._step;
 	}
 	
-	public function onHit()
+	public function onHit(  )
 	{
-		Main.Instance.changeLevel(Main.GAME_OVER);
+		onHitEnemy();
 	}
 	
 	// PUBLIC METHODS
