@@ -21,7 +21,7 @@ class Level extends Sprite
 	private var _player:Player;
 	private var _enemies:List<Enemy>;
 	private var _bg:Bitmap;
-	private var _safeZone:Point;
+	private var _safeZone:Int;
 	
 	// PROPERTIES
 	
@@ -33,7 +33,7 @@ class Level extends Sprite
 	public function new( id, numberOfEnemies, ?_onFinish ) 
 	{
 		super();
-		this.setSafeZone();
+		this._safeZone = random(4);
 		
 		this.id = id;
 		this._onFinish = _onFinish;
@@ -117,25 +117,4 @@ class Level extends Sprite
 	}
 	
 	// PRIVATE METHODS
-	
-	public function setSafeZone() 
-	{
-		var direction = random(4);
-		
-		switch (direction) 
-		{
-			case 1:
-				this._safeZone = new Point(590, 50);
-				break;
-			case 2:
-				this._safeZone = new Point(50, 430);
-				break;
-			case 3:
-				this._safeZone = new Point(590, 430);
-				break;
-			default:
-				this._safeZone = new Point(50, 50);
-				break;
-		}
-	}
 }

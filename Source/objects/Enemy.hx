@@ -13,11 +13,14 @@ class Enemy extends Entity
 {
 	// VARIABLES
 	
+	private var _safeZone: Int;
+	
 	// PROPERTIES
 	
 	// CONSTRUCTORS
-	public function new(safeZone: Point) 
+	public function new(safeZone: Int) 
 	{
+		this._safeZone = safeZone;
 		var start = this.getRandomPoint();
 		
 		super('purpleblock.png', start.x, start.y);
@@ -38,6 +41,7 @@ class Enemy extends Entity
 	
 	private function getRandomPoint()
 	{
+		
 		var x = random(640);
 		var y = random(480);
 		return new Point(x, y);
