@@ -57,6 +57,13 @@ class ApplicationMain {
 		
 		
 		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/purpleblock.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
 		loaders.set("assets/gfx/redblock.png", loader);
 		total ++;
 		

@@ -8,7 +8,7 @@ class Enemy extends Entity
 {
 	// VARIABLES
 	
-	// PROTERTIES
+	// PROPERTIES
 	
 	// CONSTRUCTORS
 	public function new() 
