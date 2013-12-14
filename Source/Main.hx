@@ -44,11 +44,6 @@ class Main extends Sprite {
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 		
-		addChild(new Entity("redblock.png", 25, 25));
-		addChild(new Entity("redblock.png", 240, 25));
-		addChild(new Entity("redblock.png", 25, 240));
-		addChild(new Entity("redblock.png", 240, 240));
-		
 		
 	}
 	
