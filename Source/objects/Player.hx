@@ -14,7 +14,7 @@ class Player extends Entity
 	
 	// PROPERTIES
 	
-	public var gotCoin (default, null): Bool;
+	public var gotCoin: Bool;
 	
 	// CONSTRUCTORS
 	public function new(step) 
