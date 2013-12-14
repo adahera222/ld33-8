@@ -8,7 +8,7 @@ class Player extends Entity
 {
 	// VARIABLES
 	
-	this._step = 5;
+	private var _step: Int = 5;
 	
 	// PROPERTIES
 	
