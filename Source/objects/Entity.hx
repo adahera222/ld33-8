@@ -74,6 +74,11 @@ class Entity extends Sprite
 		this.y += y;
 	}
 	
+	public function changeImage(fname:String) 
+	{
+		var tempImg =  new Bitmap( Assets.getBitmapData("assets/gfx/" + fname) );
+		set_image(tempImg);
+	}
 	
 	
 	
