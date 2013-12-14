@@ -4,7 +4,9 @@ import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
+import flash.geom.Point;
 import flash.ui.Keyboard;
+import Std.random;
 
 /**
  * ...
@@ -19,6 +21,7 @@ class Level extends Sprite
 	private var _player:Player;
 	private var _enemies:List<Enemy>;
 	private var _bg:Bitmap;
+	private var _safeZone:Point;
 	
 	// PROPERTIES
 	
@@ -30,6 +33,7 @@ class Level extends Sprite
 	public function new( id, numberOfEnemies, ?_onFinish ) 
 	{
 		super();
+		this.setSafeZone();
 		
 		this.id = id;
 		this._onFinish = _onFinish;
@@ -37,11 +41,12 @@ class Level extends Sprite
 			if (numberOfEnemies > 0) {
 			for (i in 0...numberOfEnemies) 
 			{
-				var newEnemy = new Enemy();
+				var newEnemy = new Enemy(this._safeZone);
 				_enemies.add(newEnemy);
 				addChild(newEnemy);
 			}
 		}
+		
 	}
 	
 	// HANDLERS
@@ -81,13 +86,9 @@ class Level extends Sprite
 			{
 				_player.onHit();
 			}
-			
-			enemy.update();
 		}
 		// COLLISION DETECTION HERE
 	}
-	
-	// PRIVATE METHODS
 	
 	// PUBLIC METHODS
 	
@@ -115,4 +116,26 @@ class Level extends Sprite
 		return _bg; 
 	}
 	
+	// PRIVATE METHODS
+	
+	public function setSafeZone() 
+	{
+		var direction = random(4);
+		
+		switch (direction) 
+		{
+			case 1:
+				this._safeZone = new Point(590, 50);
+				break;
+			case 2:
+				this._safeZone = new Point(50, 430);
+				break;
+			case 3:
+				this._safeZone = new Point(590, 430);
+				break;
+			default:
+				this._safeZone = new Point(50, 50);
+				break;
+		}
+	}
 }

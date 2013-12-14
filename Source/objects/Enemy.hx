@@ -16,7 +16,7 @@ class Enemy extends Entity
 	// PROPERTIES
 	
 	// CONSTRUCTORS
-	public function new() 
+	public function new(safeZone: Point) 
 	{
 		var start = this.getRandomPoint();
 		
@@ -27,17 +27,13 @@ class Enemy extends Entity
 	
 	// HANDLERS
 	
-	
-	
-	
 	// PUBLIC FUNCTIONS
 	
 	public function update() 
 	{
 		
 	}
-	
-	
+		
 	// PRIVATE FUNCTIONS
 	
 	private function getRandomPoint()
@@ -46,10 +42,10 @@ class Enemy extends Entity
 		var y = random(480);
 		return new Point(x, y);
 	}
+	
 	private function gotoPoint() 
 	{
 		var position = getRandomPoint();
 		Actuate.tween(this, random(10), { x: position.x, y: position.y } ).onComplete(this.gotoPoint);
 	}
-	
 }
