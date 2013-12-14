@@ -32,6 +32,8 @@ class Enemy extends Entity
 	// PUBLIC FUNCTIONS
 	
 	public function update() {
+		if (stage == null) return;
+		
 		var newX = this.randomLocation(this.x, stage.width);
 		var newY = this.randomLocation(this.y, stage.height);
 		Actuate.tween(this, 0, { x: newX, y: newY } );

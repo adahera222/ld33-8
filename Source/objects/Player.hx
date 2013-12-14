@@ -44,7 +44,7 @@ class Player extends Entity
 	
 	public function onHit()
 	{
-		
+		Main.Instance.changeLevel(Main.GAME_OVER);
 	}
 	
 	// PUBLIC METHODS

@@ -1,5 +1,6 @@
 package objects;
 
+import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
@@ -17,11 +18,13 @@ class Level extends Sprite
 	private var _onFinish:Void -> Void;
 	private var _player:Player;
 	private var _enemies:List<Enemy>;
+	private var _bg:Bitmap;
 	
 	// PROPERTIES
 	
 	public var id (get, set):String;
 	public var player(get, set):Player;
+	public var background(get, set):Bitmap;
 	
 	// CONSTRUCTORS
 	public function new( id, numberOfEnemies, ?_onFinish ) 
@@ -31,13 +34,14 @@ class Level extends Sprite
 		this.id = id;
 		this._onFinish = _onFinish;
 		_enemies = new List();
-		for (i in 0...numberOfEnemies) 
-		{
-			var newEnemy = new Enemy();
-			_enemies.add(newEnemy);
-			addChild(newEnemy);
+			if (numberOfEnemies > 0) {
+			for (i in 0...numberOfEnemies) 
+			{
+				var newEnemy = new Enemy();
+				_enemies.add(newEnemy);
+				addChild(newEnemy);
+			}
 		}
-		
 	}
 	
 	// HANDLERS
@@ -66,6 +70,11 @@ class Level extends Sprite
 	
 	public function onUpdate(event:Event)
 	{
+		if (_enemies.isEmpty() || _player == null) return;
+		
+		trace(id);
+		trace(_enemies);
+		
 		for (enemy in this._enemies) 
 		{
 			if (_player != null && _player.hitTestObject(enemy))
@@ -94,6 +103,16 @@ class Level extends Sprite
 		_player = player;
 		addChild(_player);
 		return _player; 
+	}
+	
+	public function get_background() { return _bg; }
+	public function set_background(bg)
+	{
+		if (_bg != null) removeChild(_bg);
+		_bg = bg;
+		addChild(_bg);
+		setChildIndex(_bg, 0); // move to back
+		return _bg; 
 	}
 	
 }
