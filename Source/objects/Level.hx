@@ -87,7 +87,10 @@ class Level extends Sprite
 				_player.onHit(entity);
 			}
 		}
-		// COLLISION DETECTION HERE
+		if (_player != null && _player.gotCoin) {
+			_player.gotCoin = false;
+			_onFinish();
+		}
 	}
 	
 	// PUBLIC METHODS

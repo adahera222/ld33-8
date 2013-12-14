@@ -14,6 +14,8 @@ class Player extends Entity
 	
 	// PROPERTIES
 	
+	public var gotCoin (default, null): Bool;
+	
 	// CONSTRUCTORS
 	public function new(step) 
 	{
@@ -47,6 +49,7 @@ class Player extends Entity
 	public function onHit( other )
 	{
 		if (Std.is(other, Enemy)) onHitEnemy();
+		else if (Std.is(other, Coin)) this.gotCoin = true;
 	}
 	
 	// PUBLIC METHODS
