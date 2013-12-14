@@ -89,7 +89,8 @@ class Level extends Sprite
 		}
 		if (_player != null && _player.gotCoin) {
 			_player.gotCoin = false;
-			_onFinish();
+			// end level
+			if (_onFinish != null)	_onFinish();
 		}
 	}
 	
