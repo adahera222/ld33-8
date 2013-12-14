@@ -31,6 +31,12 @@ class Level extends Sprite
 		this.id = id;
 		this._onFinish = _onFinish;
 		_enemies = new List();
+		for (i in 1...numberOfEnemies) 
+		{
+			var newEnemy = new Enemy();
+			_enemies.add(newEnemy);
+			addChild(newEnemy);
+		}
 		
 	}
 	
@@ -38,7 +44,7 @@ class Level extends Sprite
 	
 	public function onKeyDown (event:KeyboardEvent)
 	{
-		trace("leve::onkeydown");
+		trace("level::onkeydown");
 		
 		if (player == null) return;
 		

@@ -3,6 +3,7 @@
 	
 	<meta title="Ld28" package="com.example.ld28" version="1.0.0" company="Company Name" />
 	<app main="Main" path="Export" file="Ld28" />
+	<window width="640" height="480" />
 	
 	<source path="Source" />
 	
