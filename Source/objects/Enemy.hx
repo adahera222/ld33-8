@@ -1,7 +1,6 @@
 package objects;
 
 import flash.events.Event;
-import haxe.Timer;
 import motion.Actuate;
 import Std.random;
 
@@ -33,22 +32,24 @@ class Enemy extends Entity
 	// PUBLIC FUNCTIONS
 	
 	public function update() {
-		var newX = this.operator(this.x);
-		var newY = this.operator(this.y);
+		var newX = this.randomLocation(this.x, stage.width);
+		var newY = this.randomLocation(this.y, stage.height);
 		Actuate.tween(this, 0, { x: newX, y: newY } );
 	}
 	
 	
 	// PRIVATE FUNCTIONS
 	
-	private function operator(value: Float) {
+	private function randomLocation(value: Float, maxValue: Float) {
 		var operator = random(2);
 		switch (operator) 
 		{
 			case 1:
-				return value += this._step;
+				var newVal = value += this._step;
+				return newVal > maxValue ? maxValue : newVal;
 			default:
-				return value -= this._step;
+				var newVal = value -= this._step;
+				return newVal < 0 ? 0 : newVal;
 		}
 	}
 	
