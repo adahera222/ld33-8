@@ -1,5 +1,6 @@
 -main ApplicationMain 
 -lib openfl
+-lib actuate
 -cp Source
 -D tools=1.2.1
 -D openfl=1.2
