@@ -27,7 +27,7 @@ class Entity extends Sprite
 	{
 		super();
 		// do we need resource manager to get bitmaps?
-		this.image = new Bitmap( Assets.getBitmapData("assets/gfx/" + fname) );
+		this.image = ResourceManager.getBitmap(fname);
 		this.x = x;
 		this.y = y;
 	}
@@ -76,7 +76,7 @@ class Entity extends Sprite
 	
 	public function changeImage(fname:String) 
 	{
-		var tempImg =  new Bitmap( Assets.getBitmapData("assets/gfx/" + fname) );
+		var tempImg =  ResourceManager.getBitmap(fname);
 		set_image(tempImg);
 	}
 	
