@@ -19,7 +19,7 @@ class Level extends Sprite
 	private var _id:String;
 	private var _onFinish:Void -> Void;
 	private var _player:Player;
-	private var _enemies:List<Enemy>;
+	private var _entities:List<Entity>;
 	private var _bg:Bitmap;
 	private var _safeZone:Int;
 	
@@ -37,12 +37,12 @@ class Level extends Sprite
 		
 		this.id = id;
 		this._onFinish = _onFinish;
-		_enemies = new List();
+		_entities = new List();
 			if (numberOfEnemies > 0) {
 			for (i in 0...numberOfEnemies) 
 			{
 				var newEnemy = new Enemy(this._safeZone);
-				_enemies.add(newEnemy);
+				_entities.add(newEnemy);
 				addChild(newEnemy);
 			}
 		}
@@ -75,16 +75,16 @@ class Level extends Sprite
 	
 	public function onUpdate(event:Event)
 	{
-		if (_enemies.isEmpty() || _player == null) return;
+		if (_entities.isEmpty() || _player == null) return;
 		
 		trace(id);
-		trace(_enemies);
+		trace(_entities);
 		
-		for (enemy in this._enemies) 
+		for (entity in this._entities) 
 		{
-			if (_player != null && _player.hitTestObject(enemy))
+			if (_player != null && _player.hitTestObject(entity))
 			{
-				_player.onHit();
+				_player.onHit(entity);
 			}
 		}
 		// COLLISION DETECTION HERE

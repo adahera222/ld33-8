@@ -44,9 +44,9 @@ class Player extends Entity
 		this.y += this._step;
 	}
 	
-	public function onHit(  )
+	public function onHit( other )
 	{
-		onHitEnemy();
+		if (Std.is(other, Enemy)) onHitEnemy();
 	}
 	
 	// PUBLIC METHODS
