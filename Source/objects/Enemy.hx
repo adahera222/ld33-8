@@ -1,6 +1,7 @@
 package objects;
 
 import flash.events.Event;
+import flash.geom.Point;
 import motion.Actuate;
 import Std.random;
 
@@ -12,16 +13,16 @@ class Enemy extends Entity
 {
 	// VARIABLES
 	
-	private var _step: Int = 5;
-	
 	// PROPERTIES
 	
 	// CONSTRUCTORS
 	public function new() 
 	{
-		var x = 200 + random(300);
-		var y = random(400);
-		super('purpleblock.png', x, y);
+		var start = this.getRandomPoint();
+		
+		super('purpleblock.png', start.x, start.y);
+		
+		this.gotoPoint();
 	}
 	
 	// HANDLERS
@@ -31,28 +32,24 @@ class Enemy extends Entity
 	
 	// PUBLIC FUNCTIONS
 	
-	public function update() {
-		if (stage == null) return;
+	public function update() 
+	{
 		
-		var newX = this.randomLocation(this.x, stage.width);
-		var newY = this.randomLocation(this.y, stage.height);
-		Actuate.tween(this, 0, { x: newX, y: newY } );
 	}
 	
 	
 	// PRIVATE FUNCTIONS
 	
-	private function randomLocation(value: Float, maxValue: Float) {
-		var operator = random(2);
-		switch (operator) 
-		{
-			case 1:
-				var newVal = value += this._step;
-				return newVal > maxValue ? maxValue : newVal;
-			default:
-				var newVal = value -= this._step;
-				return newVal < 0 ? 0 : newVal;
-		}
+	private function getRandomPoint()
+	{
+		var x = random(640);
+		var y = random(480);
+		return new Point(x, y);
+	}
+	private function gotoPoint() 
+	{
+		var position = getRandomPoint();
+		Actuate.tween(this, random(10), { x: position.x, y: position.y } ).onComplete(this.gotoPoint);
 	}
 	
 }
