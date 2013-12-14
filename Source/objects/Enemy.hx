@@ -23,24 +23,20 @@ class Enemy extends Entity
 		var x = 200 + random(300);
 		var y = random(400);
 		super('purpleblock.png', x, y);
-		
-		var timer = new Timer(100);
-		timer.run = onUpdate;
-		//stage.addEventListener(Event.ENTER_FRAME, onUpdate);
 	}
 	
 	// HANDLERS
 	
-	private function onUpdate() {
-		var newX = this.operator(this.x);
-		var newY = this.operator(this.y);
-		Actuate.tween(this, 0, { x: newX, y: newY } );
-	}
+	
 	
 	
 	// PUBLIC FUNCTIONS
 	
-	
+	public function update() {
+		var newX = this.operator(this.x);
+		var newY = this.operator(this.y);
+		Actuate.tween(this, 0, { x: newX, y: newY } );
+	}
 	
 	
 	// PRIVATE FUNCTIONS

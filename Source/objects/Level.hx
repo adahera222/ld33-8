@@ -31,7 +31,7 @@ class Level extends Sprite
 		this.id = id;
 		this._onFinish = _onFinish;
 		_enemies = new List();
-		for (i in 1...numberOfEnemies) 
+		for (i in 0...numberOfEnemies) 
 		{
 			var newEnemy = new Enemy();
 			_enemies.add(newEnemy);
@@ -68,6 +68,10 @@ class Level extends Sprite
 	
 	public function onUpdate(event:Event)
 	{
+		for (enemy in this._enemies) 
+		{
+			enemy.update();
+		}
 		// COLLISION DETECTION HERE
 	}
 	
