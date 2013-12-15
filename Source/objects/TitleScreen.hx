@@ -23,7 +23,7 @@ class TitleScreen extends Screen
 		this.background = ResourceManager.getBitmap("Title.png");
 		
 		this.startButton = new Button('start_game.png', 225, 225, _onStartSelect);
-		this.howToButton = new Button('how_to_play.png', 225, 225, _onHowToSelect);
+		this.howToButton = new Button('story.png', 225, 225, _onHowToSelect);
 		
 		addChild(startButton);
 	}

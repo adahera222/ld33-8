@@ -13,6 +13,7 @@ import objects.Level;
 import objects.Player;
 import objects.ResourceManager;
 import objects.Screen;
+import objects.StoryScreen;
 import objects.TitleScreen;
 
 import motion.easing.Elastic;
@@ -27,6 +28,7 @@ class Main extends Sprite {
 
 	public static var GAME_OVER = "Main.GAME_OVER";
 	public static var TITLE_SCREEN = 'Main.TITLE_SCREEN';
+	public static var STORY_SCREEN = 'Main.STORY_SCREEN';
 	
 	var player:Player;
 	var currentScreen:Screen;
@@ -43,6 +45,7 @@ class Main extends Sprite {
 		createPlayer();
 		
 		createGameOverLevel();
+		createStoryScreen();
 		createTitelScreen();
 		
 		
@@ -149,7 +152,7 @@ class Main extends Sprite {
 	
 	private function openHowTo()
 	{
-		
+		this.changeLevel(STORY_SCREEN);
 	}
 	
 	private function createGameOverLevel()
@@ -162,5 +165,14 @@ class Main extends Sprite {
 		levelMap.set(GAME_OVER, level);
 	}
 	
+	private function createStoryScreen()
+	{
+		var level = new StoryScreen(STORY_SCREEN);
+		level.onFinish = function ()
+		{
+			this.startGame();
+		}
+		levelMap.set(STORY_SCREEN, level);
+	}
 	
 }
