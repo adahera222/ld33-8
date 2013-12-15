@@ -11,10 +11,6 @@ Graphics:
 * [Game over screen](https://commons.wikimedia.org/wiki/File:Asymmetric_Ashes_%28artist%27s_impression%29.jpg) by [ESO](https://en.wikipedia.org/wiki/European_Southern_Observatory)
 * [Game background] (http://www.dvidshub.net/unit/NASA#.Uq3JRfTuJJM)
 * [Other Game backgrounds] (http://www.bittbox.com/resources/35-stunning-hi-res-public-domain-astronomy-images)
-	
-Sounds:
----------
-* [Bilou le skankerfou - 8 bit morph] (https://myspace.com/lebilouleskankerfou)
 
 License:
 --------
