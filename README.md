@@ -6,6 +6,7 @@ Theme: You Only Get One
 Graphics:
 ---------
 * [Breakout graphics](http://opengameart.org/content/breakout-graphics-no-shadow)
+* [Cinzel Decorative](http://www.google.com/fonts/specimen/Cinzel+Decorative) by Natanael Gama
 
 License:
 --------
