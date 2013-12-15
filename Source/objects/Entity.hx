@@ -15,6 +15,9 @@ class Entity extends Sprite
 
 	// image of our sprite
 	private var _img:Bitmap;
+	
+	public var active:Bool = true;
+	
 	public var image(get, set):Bitmap;
 	
 	// height and with (get only)
