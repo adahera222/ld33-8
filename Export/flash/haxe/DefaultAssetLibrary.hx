@@ -66,10 +66,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/Title.png", __ASSET__assets_gfx_title_png);
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
-		className.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_mp3);
-		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", Reflect.field (AssetType, "music".toUpperCase ()));
-		className.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_ogg);
-		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", Reflect.field (AssetType, "music".toUpperCase ()));
 		
 		
 		#elseif html5
@@ -104,10 +100,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/Title.png", "assets/gfx/Title.png");
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
-		path.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", "assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3");
-		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", Reflect.field (AssetType, "music".toUpperCase ()));
-		path.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", "assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg");
-		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", Reflect.field (AssetType, "music".toUpperCase ()));
 		
 		
 		#else
@@ -564,13 +556,9 @@ class __ASSET__assets_gfx_start_game_png extends flash.display.BitmapData { publ
 class __ASSET__assets_gfx_story_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_story_screen_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_title_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
-class __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_mp3 extends flash.media.Sound { }
-class __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_ogg extends flash.media.Sound { }
 
 
 #elseif html5
-
-
 
 
 

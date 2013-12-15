@@ -4,7 +4,6 @@
 -cp Source
 -D tools=1.2.1
 -D openfl=1.2
--D fdb
 -D web
 -swf-version 11.2
 -swf Export/flash/bin/Ld28.swf

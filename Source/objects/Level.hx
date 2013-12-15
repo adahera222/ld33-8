@@ -69,9 +69,6 @@ class Level extends Screen
 	{
 		if (_entities.isEmpty() || _player == null) return;
 		
-		trace(id);
-		trace(_entities);
-		
 		for (entity in this._entities) 
 		{
 			if (_player != null && _player.hitTestObject(entity))
