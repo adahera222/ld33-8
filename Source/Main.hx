@@ -102,6 +102,10 @@ class Main extends Sprite {
 		// create and init new level
 		var level = new Level(id, numberOfEnemies);
 		level.player = this.player;
+		level.onFinish = function ()
+		{
+			this.changeLevel(GAME_OVER);
+		}
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set

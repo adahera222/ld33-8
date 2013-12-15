@@ -1,5 +1,7 @@
 package objects;
 
+import Std.random;
+
 /**
  * ...
  * @author armornick
@@ -7,8 +9,11 @@ package objects;
 class Coin extends Entity
 {
 
-	public function new(x, y) 
+	public function new() 
 	{
+		var x = random(640);
+		var y = random(480);
+		
 		super("coin.png", x, y);
 	}
 	

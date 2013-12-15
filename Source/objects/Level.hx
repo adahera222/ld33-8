@@ -32,14 +32,15 @@ class Level extends Screen
 		this._safeZone = random(4);
 		
 		_entities = new List();
-			if (numberOfEnemies > 0) {
+		if (numberOfEnemies > 0) {
 			for (i in 0...numberOfEnemies) 
 			{
 				var newEnemy = new Enemy(this._safeZone);
-				_entities.add(newEnemy);
-				addChild(newEnemy);
+				addEntity(newEnemy);
 			}
 		}
+		addEntity(new Coin());
+		
 		
 	}
 	
@@ -98,4 +99,10 @@ class Level extends Screen
 	}
 	
 	// PRIVATE METHODS
+	
+	private function addEntity (e:Entity)
+	{
+		_entities.add(e);
+		addChild(e);
+	}
 }
