@@ -1,7 +1,7 @@
 package objects;
 
 /**
- * ...
+ * Player object
  * @author Adem
  */
 class Player extends Entity

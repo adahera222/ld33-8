@@ -8,6 +8,7 @@ import flash.ui.Keyboard;
 import haxe.ds.StringMap.StringMap;
 import objects.Enemy;
 import objects.Entity;
+import objects.GameOverScreen;
 import objects.Level;
 import objects.Player;
 import objects.ResourceManager;
@@ -113,9 +114,7 @@ class Main extends Sprite {
 	
 	private function createGameOverLevel()
 	{
-		var level = new Level(GAME_OVER, 0);
-		level.background = ResourceManager.getBitmap("gameover.png");
-		//level.player = this.player;
+		var level = new GameOverScreen(GAME_OVER);
 		levelMap.set(GAME_OVER, level);
 	}
 	

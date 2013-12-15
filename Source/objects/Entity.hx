@@ -6,7 +6,8 @@ import flash.geom.Rectangle;
 import openfl.Assets;
 
 /**
- * ...
+ * Entity
+ * Superclass of game objects
  * @author armornick
  */
 class Entity extends Sprite

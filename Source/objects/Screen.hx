@@ -5,7 +5,8 @@ import flash.events.Event;
 import flash.events.KeyboardEvent;
 
 /**
- * ...
+ * Main Screen class
+ * Superclass for other game screens
  * @author armornick
  */
 class Screen extends Sprite

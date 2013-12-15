@@ -6,7 +6,8 @@ import motion.Actuate;
 import Std.random;
 
 /**
- * ...
+ * Enemy
+ * Auto-movable enemy object class.
  * @author Adem
  */
 class Enemy extends Entity

@@ -9,7 +9,8 @@ import flash.ui.Keyboard;
 import Std.random;
 
 /**
- * ...
+ * Level Screen
+ * Main playable screen of the game.
  * @author armornick
  */
 class Level extends Screen
