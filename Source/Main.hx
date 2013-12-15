@@ -113,17 +113,21 @@ class Main extends Sprite {
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set
+		/*
+		unnecessary with title screen in place
 		if (currentScreen == null) 
 		{
 			currentScreen = level;
 			addChild(currentScreen);
 		}
+		*/
 	}
 	
 	private function createTitelScreen()
 	{
 		var level = new TitleScreen(TITLE_SCREEN, startGame, openHowTo);
 		currentScreen = level;
+		levelMap.set(TITLE_SCREEN, level);
 		addChild(level);
 
 	}
@@ -141,6 +145,10 @@ class Main extends Sprite {
 	private function createGameOverLevel()
 	{
 		var level = new GameOverScreen(GAME_OVER);
+		level.onFinish = function ()
+		{
+			this.changeLevel(TITLE_SCREEN);
+		}
 		levelMap.set(GAME_OVER, level);
 	}
 	
