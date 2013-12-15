@@ -45,7 +45,6 @@ class Main extends Sprite {
 		createGameOverLevel();
 		createTitelScreen();
 		
-		createLevel();
 		
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -89,12 +88,6 @@ class Main extends Sprite {
 		
 		currentScreen = levelMap.get(id);
 		
-		// changing to level? reset player
-		if (Std.parseInt(id) != null) 
-		{
-			cast(currentScreen, Level).player = this.player;
-		}
-		
 		addChild(currentScreen);
 	}
 	
@@ -116,6 +109,7 @@ class Main extends Sprite {
 		
 		// create and init new level
 		var level = new Level(id, numberOfEnemies, this.nextLevel);
+		level.player = this.player;
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set
@@ -140,6 +134,8 @@ class Main extends Sprite {
 	
 	private function startGame() 
 	{
+		this.niveau = 1;
+		createLevel();
 		this.changeLevel("1");
 	}
 	
