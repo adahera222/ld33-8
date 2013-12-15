@@ -44,7 +44,7 @@ class Main extends Sprite {
 		createGameOverLevel();
 		createTitelScreen();
 		
-		//createLevel("1", 5);
+		createLevel("1", 5);
 		
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -130,7 +130,7 @@ class Main extends Sprite {
 	
 	private function startGame() 
 	{
-		createLevel("1", 5);
+		this.changeLevel("1");
 	}
 	
 	private function openHowTo()
