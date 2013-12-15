@@ -88,7 +88,13 @@ class Main extends Sprite {
 		}
 		
 		currentScreen = levelMap.get(id);
-		cast(currentScreen, Level).player = this.player;
+		
+		// changing to level? reset player
+		if (Std.parseInt(id) != null) 
+		{
+			cast(currentScreen, Level).player = this.player;
+		}
+		
 		addChild(currentScreen);
 	}
 	
