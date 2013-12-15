@@ -62,7 +62,7 @@ class Player extends Entity
 		var firstX = 25 - (this.width / 2);
 		var secondX = 615 - (this.width / 2);
 		var firstY = 25 - (this.height / 2);
-		var secondX = 455 - (this.height / 2);
+		var secondY = 455 - (this.height / 2);
 		
 		switch (safeZone) 
 		{
@@ -71,9 +71,9 @@ class Player extends Entity
 			case 1:
 				this.moveTo(secondX, firstY);
 			case 2:
-				this.moveTo(firstX, secondX);
+				this.moveTo(firstX, secondY);
 			case 3:
-				this.moveTo(secondX, secondX);
+				this.moveTo(secondX, secondY);
 		}
 	}
 	
