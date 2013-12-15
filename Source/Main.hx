@@ -5,7 +5,6 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
-import flash.media.Sound;
 import haxe.ds.StringMap.StringMap;
 import objects.Enemy;
 import objects.Entity;
@@ -16,7 +15,6 @@ import objects.ResourceManager;
 import objects.Screen;
 import objects.StoryScreen;
 import objects.TitleScreen;
-import openfl.Assets;
 
 import motion.easing.Elastic;
 import motion.easing.Bounce;
@@ -36,7 +34,6 @@ class Main extends Sprite {
 	private var currentScreen:Screen;
 	private var levelMap:StringMap<Screen>;
 	private var niveau:Int = 1;
-	private var sound:Sound;
 	
 	// CONSTRUCTORS
 	
@@ -56,14 +53,6 @@ class Main extends Sprite {
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 		stage.addEventListener(Event.ENTER_FRAME, onUpdate);
-		
-		#if flash
-		sound = Assets.getSound ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3");
-		#else
-		sound = Assets.getSound ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg");
-		#end
-		
-		sound.play();
 	}
 	
 	// HANDLERS
@@ -123,15 +112,6 @@ class Main extends Sprite {
 		level.player = this.player;
 		// add level to table
 		levelMap.set(id, level);
-		// set current level if not set
-		/*
-		unnecessary with title screen in place
-		if (currentScreen == null) 
-		{
-			currentScreen = level;
-			addChild(currentScreen);
-		}
-		*/
 	}
 	
 	private function createTitelScreen()
