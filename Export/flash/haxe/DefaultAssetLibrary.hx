@@ -38,6 +38,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/gfx/background1.jpg", __ASSET__assets_gfx_background1_jpg);
 		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background2.jpg", __ASSET__assets_gfx_background2_jpg);
+		type.set ("assets/gfx/background2.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background3.jpg", __ASSET__assets_gfx_background3_jpg);
+		type.set ("assets/gfx/background3.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background4.jpg", __ASSET__assets_gfx_background4_jpg);
+		type.set ("assets/gfx/background4.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background5.jpg", __ASSET__assets_gfx_background5_jpg);
+		type.set ("assets/gfx/background5.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background6.jpg", __ASSET__assets_gfx_background6_jpg);
+		type.set ("assets/gfx/background6.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background7.jpg", __ASSET__assets_gfx_background7_jpg);
+		type.set ("assets/gfx/background7.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/coin.png", __ASSET__assets_gfx_coin_png);
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/gameover.png", __ASSET__assets_gfx_gameover_png);
@@ -50,6 +62,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/story.png", __ASSET__assets_gfx_story_png);
 		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/story_screen.png", __ASSET__assets_gfx_story_screen_png);
+		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/Title.png", __ASSET__assets_gfx_title_png);
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -58,6 +72,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		path.set ("assets/gfx/background1.jpg", "assets/gfx/background1.jpg");
 		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background2.jpg", "assets/gfx/background2.jpg");
+		type.set ("assets/gfx/background2.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background3.jpg", "assets/gfx/background3.jpg");
+		type.set ("assets/gfx/background3.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background4.jpg", "assets/gfx/background4.jpg");
+		type.set ("assets/gfx/background4.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background5.jpg", "assets/gfx/background5.jpg");
+		type.set ("assets/gfx/background5.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background6.jpg", "assets/gfx/background6.jpg");
+		type.set ("assets/gfx/background6.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background7.jpg", "assets/gfx/background7.jpg");
+		type.set ("assets/gfx/background7.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/coin.png", "assets/gfx/coin.png");
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/gameover.png", "assets/gfx/gameover.png");
@@ -70,6 +96,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/story.png", "assets/gfx/story.png");
 		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/story_screen.png", "assets/gfx/story_screen.png");
+		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/Title.png", "assets/gfx/Title.png");
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -514,16 +542,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 #elseif flash
 
 class __ASSET__assets_gfx_background1_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background2_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background3_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background4_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background5_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background6_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background7_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_coin_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_purpleblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_redblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_start_game_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_story_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_story_screen_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_title_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 
 
 #elseif html5
+
+
+
+
+
+
+
 
 
 

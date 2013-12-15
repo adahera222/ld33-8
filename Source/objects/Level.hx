@@ -29,9 +29,7 @@ class Level extends Screen
 	public function new( id, numberOfEnemies, ?_onFinish ) 
 	{
 		super(id, _onFinish);
-		this.background = ResourceManager.getBitmap("background1.jpg");
-		this.background.width = 640;
-		this.background.height = 480;
+		this.setLevelBackground();
 		
 		this._safeZone = random(4);
 		
@@ -108,5 +106,13 @@ class Level extends Screen
 	{
 		_entities.add(e);
 		addChild(e);
+	}
+	
+	private function setLevelBackground() 
+	{
+		var randomImageNr = random(7) + 1;
+		this.background = ResourceManager.getBitmap('background' + randomImageNr + '.jpg');
+		this.background.width = 640;
+		this.background.height = 480;
 	}
 }
