@@ -19,11 +19,11 @@ class TitleScreen extends Screen
 	// CONSTRUCTS
 	public function new(id, _onStartSelect, _onHowToSelect) 
 	{
-		super(id, this.onSelect);
+		super(id);
 		this.background = ResourceManager.getBitmap("Title.png");
 		
-		this.startButton = new Button('start_game.png', 150, 150, _onStartSelect);
-		this.howToButton = new Button('how_to_play.png', 150, 100, _onHowToSelect);
+		this.startButton = new Button('start_game.png', 225, 225, _onStartSelect);
+		this.howToButton = new Button('how_to_play.png', 225, 225, _onHowToSelect);
 		
 		addChild(startButton);
 	}
@@ -49,13 +49,15 @@ class TitleScreen extends Screen
 				}
 				
 			case Keyboard.ENTER:
-				
+				if (this._state)
+				{
+					this.startButton.onSelect();
+				}
+				else
+				{
+					this.howToButton.onSelect();
+				}
 		}
-	}
-	
-	public function onSelect()
-	{
-		
 	}
 	
 	// PUBLIC METHODS

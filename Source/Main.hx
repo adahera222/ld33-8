@@ -130,7 +130,7 @@ class Main extends Sprite {
 	
 	private function startGame() 
 	{
-		
+		createLevel("1", 5);
 	}
 	
 	private function openHowTo()

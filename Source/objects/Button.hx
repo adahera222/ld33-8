@@ -24,6 +24,11 @@ class Button extends Entity
 	
 	// HANDLERS
 	
+	public function onSelect()
+	{
+		this._onSelect();
+	}
+	
 	// PUBLIC METHODS
 	
 	// PRIVATE METHODS
