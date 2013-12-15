@@ -6,8 +6,7 @@ package objects;
  */
 class Player extends Entity
 {
-	// VARIABLES
-	
+	// VARIABLES	
 	private var _step: Int = 5;
 	
 	public var onHitEnemy:Void -> Void;
@@ -28,22 +27,26 @@ class Player extends Entity
 	
 	public function GoLeft()
 	{
-		this.x -= this._step;
+		var x = this.x - this._step;
+		this.x = x > 0 ? x : 0;
 	}
 	
 	public function GoRight()
 	{
-		this.x += this._step;
+		var x = this.x + this._step;
+		this.x = x < (640 - this.width) ? x : (640 - this.width);
 	}
 	
 	public function GoUp()
 	{
-		this.y -= this._step;
+		var y = this.y - this._step;
+		this.y = y > 0 ? y : 0;
 	}
 	
 	public function GoDown()
 	{
-		this.y += this._step;
+		var y = this.y + this._step;
+		this.y = y < (480 - this.height) ? y : (480 - this.height);
 	}
 	
 	public function onHit( other )
@@ -56,20 +59,23 @@ class Player extends Entity
 	
 	public function setStartPosition(safeZone)
 	{
+		var firstX = 25 - (this.width / 2);
+		var secondX = 615 - (this.width / 2);
+		var firstY = 25 - (this.height / 2);
+		var secondX = 455 - (this.height / 2);
+		
 		switch (safeZone) 
 		{
-			case 1:
-				this.moveTo(615, 25);
-			case 2:
-				this.moveTo(25, 455);
-			case 3:
-				this.moveTo(615, 455);
 			default:
-				this.moveTo(25, 25);
+				this.moveTo(firstX , firstY);
+			case 1:
+				this.moveTo(secondX, firstY);
+			case 2:
+				this.moveTo(firstX, secondX);
+			case 3:
+				this.moveTo(secondX, secondX);
 		}
 	}
 	
-	
 	// PRIVATE METHODS
-	
 }
