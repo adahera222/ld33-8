@@ -9,6 +9,7 @@ Graphics:
 * [Cinzel Decorative](http://www.google.com/fonts/specimen/Cinzel+Decorative) by Natanael Gama
 * [Title screen](http://www.public-domain-photos.com/space/galaxy-2.htm) from public-domain-photos.com
 * [Game over screen](https://commons.wikimedia.org/wiki/File:Asymmetric_Ashes_%28artist%27s_impression%29.jpg) by [ESO](https://en.wikipedia.org/wiki/European_Southern_Observatory)
+* [Game background] (http://www.dvidshub.net/unit/NASA#.Uq3JRfTuJJM)
 
 License:
 --------

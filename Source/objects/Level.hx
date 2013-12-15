@@ -29,6 +29,10 @@ class Level extends Screen
 	public function new( id, numberOfEnemies, ?_onFinish ) 
 	{
 		super(id, _onFinish);
+		this.background = ResourceManager.getBitmap("background1.jpg");
+		this.background.width = 640;
+		this.background.height = 480;
+		
 		this._safeZone = random(4);
 		
 		_entities = new List();

@@ -36,6 +36,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/gfx/background1.jpg", __ASSET__assets_gfx_background1_jpg);
+		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/coin.png", __ASSET__assets_gfx_coin_png);
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/gameover.png", __ASSET__assets_gfx_gameover_png);
@@ -54,6 +56,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#elseif html5
 		
+		path.set ("assets/gfx/background1.jpg", "assets/gfx/background1.jpg");
+		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/coin.png", "assets/gfx/coin.png");
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/gameover.png", "assets/gfx/gameover.png");
@@ -509,6 +513,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if pixi
 #elseif flash
 
+class __ASSET__assets_gfx_background1_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_coin_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_purpleblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
@@ -519,6 +524,7 @@ class __ASSET__assets_gfx_title_png extends flash.display.BitmapData { public fu
 
 
 #elseif html5
+
 
 
 
