@@ -10,7 +10,7 @@ import Std.random;
  */
 class Coin extends Entity
 {
-	static var bounds = new Rectangle(50, 50, 630, 470);
+	static var bounds = new Rectangle(50, 50, 640 - 82, 480 - 82);
 	
 
 	public function new() 
