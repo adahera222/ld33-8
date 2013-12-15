@@ -1,5 +1,7 @@
 package objects;
 
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import Std.random;
 
 /**
@@ -8,11 +10,17 @@ import Std.random;
  */
 class Coin extends Entity
 {
+	static var bounds = new Rectangle(50, 50, 630, 470);
+	
 
 	public function new() 
 	{
-		var x = random(640);
-		var y = random(480);
+		var x, y;
+		
+		do {
+			x = random(640);
+			y = random(480);
+		} while ( !bounds.containsPoint(new Point(x, y)) );
 		
 		super("coin.png", x, y);
 	}
