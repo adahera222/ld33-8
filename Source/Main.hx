@@ -31,6 +31,7 @@ class Main extends Sprite {
 	var player:Player;
 	var currentScreen:Screen;
 	var levelMap:StringMap<Screen>;
+	var niveau:Int = 1;
 	
 	// CONSTRUCTORS
 	
@@ -44,7 +45,7 @@ class Main extends Sprite {
 		createGameOverLevel();
 		createTitelScreen();
 		
-		createLevel("1", 5);
+		createLevel();
 		
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -101,15 +102,14 @@ class Main extends Sprite {
 		}
 	}
 	
-	private function createLevel(id, numberOfEnemies)
+	private function createLevel()
 	{
+		var id = "" + this.niveau;
+		var numberOfEnemies = this.niveau * 5;
+		
 		// create and init new level
-		var level = new Level(id, numberOfEnemies);
+		var level = new Level(id, numberOfEnemies, this.nextLevel);
 		level.player = this.player;
-		level.onFinish = function ()
-		{
-			this.changeLevel(GAME_OVER);
-		}
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set
@@ -135,6 +135,13 @@ class Main extends Sprite {
 	private function startGame() 
 	{
 		this.changeLevel("1");
+	}
+	
+	private function nextLevel()
+	{
+		
+		this.niveau += 1;
+		this.createLevel();
 	}
 	
 	private function openHowTo()
