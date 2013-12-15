@@ -40,14 +40,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/gameover.png", __ASSET__assets_gfx_gameover_png);
 		type.set ("assets/gfx/gameover.png", Reflect.field (AssetType, "image".toUpperCase ()));
-		className.set ("assets/gfx/how_to_play.png", __ASSET__assets_gfx_how_to_play_png);
-		type.set ("assets/gfx/how_to_play.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/purpleblock.png", __ASSET__assets_gfx_purpleblock_png);
 		type.set ("assets/gfx/purpleblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/redblock.png", __ASSET__assets_gfx_redblock_png);
 		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/start_game.png", __ASSET__assets_gfx_start_game_png);
 		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/story.png", __ASSET__assets_gfx_story_png);
+		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/Title.png", __ASSET__assets_gfx_title_png);
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -58,14 +58,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/gameover.png", "assets/gfx/gameover.png");
 		type.set ("assets/gfx/gameover.png", Reflect.field (AssetType, "image".toUpperCase ()));
-		path.set ("assets/gfx/how_to_play.png", "assets/gfx/how_to_play.png");
-		type.set ("assets/gfx/how_to_play.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/purpleblock.png", "assets/gfx/purpleblock.png");
 		type.set ("assets/gfx/purpleblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/redblock.png", "assets/gfx/redblock.png");
 		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/start_game.png", "assets/gfx/start_game.png");
 		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/story.png", "assets/gfx/story.png");
+		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/Title.png", "assets/gfx/Title.png");
 		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -511,10 +511,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 class __ASSET__assets_gfx_coin_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
-class __ASSET__assets_gfx_how_to_play_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_purpleblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_redblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_start_game_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_story_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_title_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 
 

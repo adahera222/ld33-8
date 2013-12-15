@@ -104,8 +104,8 @@ class Main extends Sprite {
 	
 	private function createLevel()
 	{
-		var id = "" + this.niveau;
-		var numberOfEnemies = this.niveau * 5;
+		var id = Std.string(this.niveau);
+		var numberOfEnemies = this.niveau * 2;
 		
 		// create and init new level
 		var level = new Level(id, numberOfEnemies, this.nextLevel);
@@ -142,6 +142,7 @@ class Main extends Sprite {
 		
 		this.niveau += 1;
 		this.createLevel();
+		this.changeLevel(Std.string(this.niveau));
 	}
 	
 	private function openHowTo()
