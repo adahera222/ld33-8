@@ -122,7 +122,8 @@ class Main extends Sprite {
 	
 	private function createTitelScreen()
 	{
-		var level = new TitleScreen(startGame, openHowTo);
+		var level = new TitleScreen(TITLE_SCREEN, startGame, openHowTo);
+		currentScreen = level;
 		addChild(level);
 
 	}

@@ -17,9 +17,10 @@ class TitleScreen extends Screen
 	// PROPERTIES
 	
 	// CONSTRUCTS
-	public function new(_onStartSelect, _onHowToSelect) 
+	public function new(id, _onStartSelect, _onHowToSelect) 
 	{
-		super('titlescreen', this.onSelect);
+		super(id, this.onSelect);
+		this.background = ResourceManager.getBitmap("Title.png");
 		
 		this.startButton = new Button('start_game.png', 150, 150, _onStartSelect);
 		this.howToButton = new Button('how_to_play.png', 150, 100, _onHowToSelect);
