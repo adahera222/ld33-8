@@ -36,18 +36,78 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/gfx/background1.jpg", __ASSET__assets_gfx_background1_jpg);
+		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background2.jpg", __ASSET__assets_gfx_background2_jpg);
+		type.set ("assets/gfx/background2.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background3.jpg", __ASSET__assets_gfx_background3_jpg);
+		type.set ("assets/gfx/background3.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background4.jpg", __ASSET__assets_gfx_background4_jpg);
+		type.set ("assets/gfx/background4.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background5.jpg", __ASSET__assets_gfx_background5_jpg);
+		type.set ("assets/gfx/background5.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background6.jpg", __ASSET__assets_gfx_background6_jpg);
+		type.set ("assets/gfx/background6.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/background7.jpg", __ASSET__assets_gfx_background7_jpg);
+		type.set ("assets/gfx/background7.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/coin.png", __ASSET__assets_gfx_coin_png);
+		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/gameover.png", __ASSET__assets_gfx_gameover_png);
+		type.set ("assets/gfx/gameover.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/purpleblock.png", __ASSET__assets_gfx_purpleblock_png);
 		type.set ("assets/gfx/purpleblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		className.set ("assets/gfx/redblock.png", __ASSET__assets_gfx_redblock_png);
 		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/start_game.png", __ASSET__assets_gfx_start_game_png);
+		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/story.png", __ASSET__assets_gfx_story_png);
+		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/story_screen.png", __ASSET__assets_gfx_story_screen_png);
+		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/gfx/Title.png", __ASSET__assets_gfx_title_png);
+		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_mp3);
+		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", Reflect.field (AssetType, "music".toUpperCase ()));
+		className.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_ogg);
+		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", Reflect.field (AssetType, "music".toUpperCase ()));
 		
 		
 		#elseif html5
 		
+		path.set ("assets/gfx/background1.jpg", "assets/gfx/background1.jpg");
+		type.set ("assets/gfx/background1.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background2.jpg", "assets/gfx/background2.jpg");
+		type.set ("assets/gfx/background2.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background3.jpg", "assets/gfx/background3.jpg");
+		type.set ("assets/gfx/background3.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background4.jpg", "assets/gfx/background4.jpg");
+		type.set ("assets/gfx/background4.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background5.jpg", "assets/gfx/background5.jpg");
+		type.set ("assets/gfx/background5.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background6.jpg", "assets/gfx/background6.jpg");
+		type.set ("assets/gfx/background6.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/background7.jpg", "assets/gfx/background7.jpg");
+		type.set ("assets/gfx/background7.jpg", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/coin.png", "assets/gfx/coin.png");
+		type.set ("assets/gfx/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/gameover.png", "assets/gfx/gameover.png");
+		type.set ("assets/gfx/gameover.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/purpleblock.png", "assets/gfx/purpleblock.png");
 		type.set ("assets/gfx/purpleblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		path.set ("assets/gfx/redblock.png", "assets/gfx/redblock.png");
 		type.set ("assets/gfx/redblock.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/start_game.png", "assets/gfx/start_game.png");
+		type.set ("assets/gfx/start_game.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/story.png", "assets/gfx/story.png");
+		type.set ("assets/gfx/story.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/story_screen.png", "assets/gfx/story_screen.png");
+		type.set ("assets/gfx/story_screen.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/gfx/Title.png", "assets/gfx/Title.png");
+		type.set ("assets/gfx/Title.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", "assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3");
+		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3", Reflect.field (AssetType, "music".toUpperCase ()));
+		path.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", "assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg");
+		type.set ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg", Reflect.field (AssetType, "music".toUpperCase ()));
 		
 		
 		#else
@@ -489,11 +549,41 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if pixi
 #elseif flash
 
+class __ASSET__assets_gfx_background1_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background2_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background3_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background4_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background5_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background6_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_background7_jpg extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_coin_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_purpleblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class __ASSET__assets_gfx_redblock_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_start_game_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_story_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_story_screen_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_gfx_title_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_mp3 extends null { }
+class __ASSET__assets_sounds_bilou_le_skankerfou___8_bit_morph_ogg extends null { }
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

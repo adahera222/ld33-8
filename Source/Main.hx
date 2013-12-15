@@ -5,6 +5,7 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
+import flash.media.Sound;
 import haxe.ds.StringMap.StringMap;
 import objects.Enemy;
 import objects.Entity;
@@ -15,6 +16,7 @@ import objects.ResourceManager;
 import objects.Screen;
 import objects.StoryScreen;
 import objects.TitleScreen;
+import openfl.Assets;
 
 import motion.easing.Elastic;
 import motion.easing.Bounce;
@@ -30,10 +32,11 @@ class Main extends Sprite {
 	public static var TITLE_SCREEN = 'Main.TITLE_SCREEN';
 	public static var STORY_SCREEN = 'Main.STORY_SCREEN';
 	
-	var player:Player;
-	var currentScreen:Screen;
-	var levelMap:StringMap<Screen>;
-	var niveau:Int = 1;
+	private var player:Player;
+	private var currentScreen:Screen;
+	private var levelMap:StringMap<Screen>;
+	private var niveau:Int = 1;
+	private var sound:Sound;
 	
 	// CONSTRUCTORS
 	
@@ -54,8 +57,13 @@ class Main extends Sprite {
 		stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 		stage.addEventListener(Event.ENTER_FRAME, onUpdate);
 		
-		//Instance = this;
+		#if flash
+		sound = Assets.getSound ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.mp3");
+		#else
+		sound = Assets.getSound ("assets/sounds/Bilou_le_skankerfou_-_8_bit_morph.ogg");
+		#end
 		
+		sound.play();
 	}
 	
 	// HANDLERS

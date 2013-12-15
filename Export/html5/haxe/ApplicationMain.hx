@@ -57,6 +57,69 @@ class ApplicationMain {
 		
 		
 		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background1.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background2.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background3.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background4.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background5.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background6.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/background7.jpg", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/coin.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/gameover.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
 		loaders.set("assets/gfx/purpleblock.png", loader);
 		total ++;
 		
@@ -66,6 +129,40 @@ class ApplicationMain {
 		var loader:Loader = new Loader();
 		loaders.set("assets/gfx/redblock.png", loader);
 		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/start_game.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/story.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/story_screen.png", loader);
+		total ++;
+		
+		
+		
+		
+		var loader:Loader = new Loader();
+		loaders.set("assets/gfx/Title.png", loader);
+		total ++;
+		
+		
+		
+		
+		
+		
 		
 		
 		
