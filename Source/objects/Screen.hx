@@ -22,6 +22,7 @@ class Screen extends Sprite
 	
 	public var id (get, set):String;
 	public var background(get, set):Bitmap;
+	public var onFinish (get, set): Void -> Void ;
 	
 	// CONSTRUCTORS
 	
@@ -63,6 +64,9 @@ class Screen extends Sprite
 		setChildIndex(_bg, 0); // move to back
 		return _bg; 
 	}
+	
+	public function get_onFinish () { return _onFinish; }
+	public function set_onFinish (cb) { this._onFinish = cb; return _onFinish; }
 	
 	// PRIVATE METHODS
 	
