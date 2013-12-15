@@ -88,6 +88,7 @@ class Main extends Sprite {
 		}
 		
 		currentScreen = levelMap.get(id);
+		cast(currentScreen, Level).player = this.player;
 		addChild(currentScreen);
 	}
 	
@@ -109,7 +110,6 @@ class Main extends Sprite {
 		
 		// create and init new level
 		var level = new Level(id, numberOfEnemies, this.nextLevel);
-		level.player = this.player;
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set
