@@ -2,6 +2,7 @@ package objects;
 
 import flash.events.Event;
 import flash.geom.Point;
+import flash.geom.Rectangle;
 import motion.Actuate;
 import Std.random;
 
@@ -12,6 +13,9 @@ import Std.random;
  */
 class Enemy extends Entity
 {
+
+	static var SCREEN_BOUNDS = new Rectangle(0, 0, 640, 480);
+	
 	// VARIABLES
 	
 	private var _safeZone: Int;
@@ -60,7 +64,11 @@ class Enemy extends Entity
 	
 	private function gotoPoint() 
 	{
-		var position = getRandomPoint();
+		var position;
+		do {
+			position = getRandomPoint();
+		} while ( !SCREEN_BOUNDS.containsRect(new Rectangle(position.x, position.y, this.width, this.height)) );
+		
 		Actuate.tween(this, random(10), { x: position.x, y: position.y } ).onComplete(this.gotoPoint);
 	}
 }
