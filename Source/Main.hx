@@ -11,6 +11,7 @@ import objects.Entity;
 import objects.Level;
 import objects.Player;
 import objects.ResourceManager;
+import objects.Screen;
 
 import motion.easing.Elastic;
 import motion.easing.Bounce;
@@ -25,8 +26,8 @@ class Main extends Sprite {
 	public static var GAME_OVER = "Main.GAME_OVER";
 	
 	var player:Player;
-	var currentLevel:Level;
-	var levelMap:StringMap<Level>;
+	var currentScreen:Screen;
+	var levelMap:StringMap<Screen>;
 	
 	// CONSTRUCTORS
 	
@@ -53,20 +54,20 @@ class Main extends Sprite {
 	
 	function onKeyDown (event:KeyboardEvent)
 	{
-		if (currentLevel == null) return;
-		currentLevel.onKeyDown(event);
+		if (currentScreen == null) return;
+		currentScreen.onKeyDown(event);
 	}
 	
 	function onKeyUp (event:KeyboardEvent)
 	{
-		if (currentLevel == null) return;
-		currentLevel.onKeyUp(event);
+		if (currentScreen == null) return;
+		currentScreen.onKeyUp(event);
 	}
 	
 	function onUpdate(event:Event)
 	{
-		if (currentLevel == null) return;
-		currentLevel.onUpdate(event);
+		if (currentScreen == null) return;
+		currentScreen.onUpdate(event);
 	}
 	
 	// PUBLIC METHODS
@@ -75,13 +76,13 @@ class Main extends Sprite {
 	{
 		if (!levelMap.exists(id)) return;
 		
-		if (currentLevel != null) 
+		if (currentScreen != null) 
 		{
-			removeChild(currentLevel);
+			removeChild(currentScreen);
 		}
 		
-		currentLevel = levelMap.get(id);
-		addChild(currentLevel);
+		currentScreen = levelMap.get(id);
+		addChild(currentScreen);
 	}
 	
 	// PRIVATE METHODS
@@ -103,10 +104,10 @@ class Main extends Sprite {
 		// add level to table
 		levelMap.set(id, level);
 		// set current level if not set
-		if (currentLevel == null) 
+		if (currentScreen == null) 
 		{
-			currentLevel = level;
-			addChild(currentLevel);
+			currentScreen = level;
+			addChild(currentScreen);
 		}
 	}
 	

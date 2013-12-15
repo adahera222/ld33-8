@@ -12,31 +12,24 @@ import Std.random;
  * ...
  * @author armornick
  */
-class Level extends Sprite
+class Level extends Screen
 {
 	// VARIABLES
 	
-	private var _id:String;
-	private var _onFinish:Void -> Void;
 	private var _player:Player;
 	private var _entities:List<Entity>;
-	private var _bg:Bitmap;
 	private var _safeZone:Int;
 	
 	// PROPERTIES
 	
-	public var id (get, set):String;
 	public var player(get, set):Player;
-	public var background(get, set):Bitmap;
 	
 	// CONSTRUCTORS
 	public function new( id, numberOfEnemies, ?_onFinish ) 
 	{
-		super();
+		super(id, _onFinish);
 		this._safeZone = random(4);
 		
-		this.id = id;
-		this._onFinish = _onFinish;
 		_entities = new List();
 			if (numberOfEnemies > 0) {
 			for (i in 0...numberOfEnemies) 
@@ -51,7 +44,7 @@ class Level extends Sprite
 	
 	// HANDLERS
 	
-	public function onKeyDown (event:KeyboardEvent)
+	override public function onKeyDown (event:KeyboardEvent)
 	{	
 		if (player == null) return;
 		
@@ -68,12 +61,7 @@ class Level extends Sprite
 		}
 	}
 	
-	public function onKeyUp (event:KeyboardEvent)
-	{
-		
-	}
-	
-	public function onUpdate(event:Event)
+	override public function onUpdate(event:Event)
 	{
 		if (_entities.isEmpty() || _player == null) return;
 		
@@ -96,9 +84,6 @@ class Level extends Sprite
 	
 	// PUBLIC METHODS
 	
-	public function get_id () { return _id; }
-	public function set_id (id) { this._id = id; return _id; }
-	
 	public function get_player () { return _player;  }
 	public function set_player (player) 
 	{ 
@@ -109,16 +94,6 @@ class Level extends Sprite
 		addChild(_player);
 		_player.setStartPosition(this._safeZone);
 		return _player; 
-	}
-	
-	public function get_background() { return _bg; }
-	public function set_background(bg)
-	{
-		if (_bg != null) removeChild(_bg);
-		_bg = bg;
-		addChild(_bg);
-		setChildIndex(_bg, 0); // move to back
-		return _bg; 
 	}
 	
 	// PRIVATE METHODS
