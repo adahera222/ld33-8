@@ -13,6 +13,7 @@ import objects.Level;
 import objects.Player;
 import objects.ResourceManager;
 import objects.Screen;
+import objects.TitleScreen;
 
 import motion.easing.Elastic;
 import motion.easing.Bounce;
@@ -25,6 +26,7 @@ import motion.Actuate;
 class Main extends Sprite {
 
 	public static var GAME_OVER = "Main.GAME_OVER";
+	public static var TITLE_SCREEN = 'Main.TITLE_SCREEN';
 	
 	var player:Player;
 	var currentScreen:Screen;
@@ -40,7 +42,9 @@ class Main extends Sprite {
 		createPlayer();
 		
 		createGameOverLevel();
-		createLevel("1", 5);
+		createTitelScreen();
+		
+		//createLevel("1", 5);
 		
 		// register callback functions
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -114,6 +118,23 @@ class Main extends Sprite {
 			currentScreen = level;
 			addChild(currentScreen);
 		}
+	}
+	
+	private function createTitelScreen()
+	{
+		var level = new TitleScreen(startGame, openHowTo);
+		addChild(level);
+
+	}
+	
+	private function startGame() 
+	{
+		
+	}
+	
+	private function openHowTo()
+	{
+		
 	}
 	
 	private function createGameOverLevel()
